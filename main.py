@@ -1,17 +1,21 @@
-from Player import *
+from Jojo import *
 
-players = []
+stand_masters = []
 
-players.append(Player("Hinata", "Blocker", "Karasuno"))
+stand_masters.append(Jojo("Jotaro", "190", "110", date(1970, 3, 5), "Star Platinum", "OraOra"))
 
 while True:
     command = input("Write command \r\n")
 
     if command == "add":
-        new_player = Player()
-        new_player.add()
-        players.append(new_player)
+        new_stand_master = Jojo()
+        new_stand_master.add()
+        stand_masters.append(new_stand_master)
 
     if command == "show":
-        for player in players:
-            print(player.show())
+        for stand_master in stand_masters:
+            print(stand_master.show())
+
+    if command == "show_stand":
+        for stand in stand_masters:
+            print(stand.show_stand())
